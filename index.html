@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+   
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        
+        <h1>
+            <i class="fa-solid fa-cloud-sun"></i>
+            Weather Forecast
+        </h1>
+
+        
+        <button id="themeBtn">
+            🌙 Dark Mode
+        </button>
+
+        
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="city"
+                placeholder="Search city..."
+                autocomplete="off"
+                aria-label="City Name">
+
+            <button
+                id="searchBtn"
+                aria-label="Search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </div>
+
+        
+        <button id="locationBtn">
+
+            <i class="fa-solid fa-location-crosshairs"></i>
+
+            Current Location
+
+        </button>
+
+       
+        <div id="loader" class="loader"></div>
+
+       
+        <div id="recentSection">
+
+            <h3>Recent Searches</h3>
+
+            <div id="recentSearches"></div>
+
+        </div>
+
+        
+        <div class="unit-toggle">
+
+            <button id="celsiusBtn" class="active">
+                °C
+            </button>
+
+            <button id="fahrenheitBtn">
+                °F
+            </button>
+
+        </div>
+
+        <!-- Error -->
+        <div id="error"></div>
+
+        <!-- Weather Card -->
+        <div class="weather-card">
+
+            <h2 id="cityName">
+                City Name
+            </h2>
+
+            <p id="todayDate"></p>
+
+            <img
+                id="icon"
+                alt="Weather Icon"
+                loading="lazy">
+
+            <h1 id="temp">
+                --°C
+            </h1>
+
+            <p id="condition">
+                Weather Condition
+            </p>
+
+            <!-- Weather Details -->
+            <div class="details">
+
+                <div>
+                    <i class="fa-solid fa-droplet"></i>
+                    <h3 id="humidity">--%</h3>
+                    <p>Humidity</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-wind"></i>
+                    <h3 id="wind">-- km/h</h3>
+                    <p>Wind</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <h3 id="feelsLike">--°C</h3>
+                    <p>Feels Like</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <h3 id="pressure">-- hPa</h3>
+                    <p>Pressure</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-eye"></i>
+                    <h3 id="visibility">-- km</h3>
+                    <p>Visibility</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-sun"></i>
+                    <h3 id="sunrise">--</h3>
+                    <p>Sunrise</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-moon"></i>
+                    <h3 id="sunset">--</h3>
+                    <p>Sunset</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Forecast -->
+        <h2 class="forecast-title">
+            5-Day Forecast
+        </h2>
+
+        <div id="forecast"></div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
